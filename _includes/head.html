@@ -1,6 +1,20 @@
 <head>
+	{% if page.title %}
+	<title>{{ page.title }} | Test Page</title>
+	{% else %}
 	<title>Test Page: Don’t Panic</title>
+	{% endif %}
+	{% if page.description %}
+	<meta content="{{ page.description }}" name="description">
+	{% else %}
+	<meta content="This is a dangerous site." name="description">
+	{% endif %}
+	<link href="/favicon.png" rel="shortcut icon" type="image/x-icon">
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@100&display=swap" rel="stylesheet">
+	<script crossorigin="anonymous" src="https://kit.fontawesome.com/69e7ba6669.js"></script>
 	<link href="/css/main.css" rel="stylesheet">
 </head>
